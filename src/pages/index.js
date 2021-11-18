@@ -14,6 +14,18 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
+        <div>
+          <a href="https://sustain.life" style="display: inline-block; position: relative; z-index: 1">
+            <span style="display: inline-block">
+              <object style="position: relative; z-index: -1"
+                    data="https://prorotypeimages.blob.core.windows.net/sustaintagicons/Area-ReduceWaste_test.svg"
+                    type="image/svg+xml"
+                    width="200"
+                    height="200">
+              </object>
+            </span>
+          </a>
+        </div>
         <Bio />
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
